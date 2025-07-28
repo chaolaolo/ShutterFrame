@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/mediaThumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <!-- Overlay cho biểu tượng video và thời lượng -->
+    <ImageView
+        android:id="@+id/videoIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/outline_play_arrow"
+        app:tint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/mediaThumbnail"
+        app:layout_constraintEnd_toEndOf="@id/mediaThumbnail"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/videoDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="#80000000"
+        android:paddingStart="4dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="2dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/mediaThumbnail"
+        app:layout_constraintStart_toStartOf="@id/mediaThumbnail"
+        tools:text="01:23"
+        tools:visibility="visible" />
+
+    <CheckBox
+
+        android:id="@+id/checkbox_selection"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:buttonTint="@color/white"
+        android:padding="2dp"
+        android:layout_margin="4dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

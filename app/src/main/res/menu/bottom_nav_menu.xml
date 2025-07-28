@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_images"
+        android:icon="@drawable/outline_image"
+        android:title="Ảnh" />
+
+    <item
+        android:id="@+id/navigation_trash"
+        android:icon="@drawable/outline_trash"
+        android:title="Thùng rác" />
+</menu>

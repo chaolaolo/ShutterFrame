@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txt_delete_permanently_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xoá mục? Mục này sẽ bị xoá vĩnh viễn khỏi thiết bị của bạn."
+        android:textAlignment="center"
+        android:textColor="#FF0000" />
+
+    <LinearLayout
+        android:id="@+id/btn_delete_permanent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/icon_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:src="@drawable/outline_delete"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_delete_permanent_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Xoá vĩnh viễn"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

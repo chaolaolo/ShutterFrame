@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MediaDetailActivity">
+
+    <!--    header-->
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/media_detail_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignItems="center"
+        app:justifyContent="space_between"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/outline_arrow_back" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <!--    main content-->
+    <ImageView
+        android:id="@+id/media_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/media_detail_footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/media_detail_header"
+        tools:src="@tools:sample/avatars" />
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/media_detail_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:controller_layout_id="@layout/custom_playback_controls"
+        app:layout_constraintBottom_toTopOf="@+id/media_detail_footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/media_detail_header"
+        app:resize_mode="fit"
+        app:show_timeout="5000"
+        app:use_controller="true" />
+    <!--    footer-->
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/media_detail_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="12dp"
+        app:alignItems="center"
+        app:justifyContent="space_evenly"
+        app:layout_constraintBottom_toTopOf="@id/txt_notice_delete"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/button_bg_outline_white"
+            android:gravity="center"
+            android:text="Xoá"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            app:icon="@drawable/outline_delete"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white" />
+
+        <Button
+            android:id="@+id/btn_restore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/button_bg_outline_white"
+            android:gravity="center"
+            android:text="Khôi phục"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            app:icon="@drawable/outline_settings_backup_restore"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+    <!--    text-->
+    <TextView
+        android:id="@+id/txt_notice_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Ảnh của bạn sẽ bị xoá vĩnh viễn sau ? ngày"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
